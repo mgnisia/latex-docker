@@ -23,7 +23,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
-        name: Build and push
+        name: Build and push mgnisia/latex-basic:latest
         uses: docker/build-push-action@v2
         with:
           push: true
@@ -31,7 +31,7 @@ jobs:
           tags: mgnisia/latex-basic:latest
 
       -
-        name: Build and push
+        name: Build and push mgnisia/latex-ubuntu
         uses: docker/build-push-action@v2
         with:
           push: true
