@@ -6,6 +6,6 @@ RUN apt-get update -q && apt-get install -qy \
     python-pygments gnuplot python3-pip \
     make git \
     && rm -rf /var/lib/apt/lists/*
-RUN pip3 install pygmentize
+RUN pip install Pygments
 WORKDIR /data
 VOLUME ["/data"]
