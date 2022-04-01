@@ -3,9 +3,9 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update -q && apt-get install -qy \
     texlive-full \
-    python-pygments gnuplot \
+    python-pygments gnuplot python3-pip \
     make git \
     && rm -rf /var/lib/apt/lists/*
-
+RUN pip3 install pygmentize
 WORKDIR /data
 VOLUME ["/data"]
